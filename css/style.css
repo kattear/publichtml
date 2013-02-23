@@ -1,0 +1,145 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+body{
+	background: url("../images/woodfine0007_m.jpg") repeat left top;
+	font-family: 'EB Garamond', serif;
+}
+
+#wrapper{
+	background: url("../images/linen2.jpg") repeat left top;
+	box-shadow: .35em .35em .5em .15em rgb(30, 30, 30), -.05em -.02em .25em .05em rgb(60, 60, 60);
+	display: flex;
+	max-width: 960px;
+	width: 95%;
+	margin: 1em auto;
+}
+
+#logo{
+	width: 17%;
+	float: left;
+	clear: none;
+	padding: .45em;
+}
+
+h1{
+
+	font-size: 2em;
+	color: rgb(207, 23, 31)
+}
+
+h2{
+	font: 120%;
+}
+
+nav ul li{
+	background: rgba(125,220,140,0);
+	border-radius: 0  0 10px 0;
+	box-shadow: -14px -15px 17px -14px rgba(149, 152, 147, 0.5) inset;
+	margin: 5px;
+	width: 7em;
+	height: 1.1em;
+	padding: .75em;
+	position: relative;
+	transition: .5s;
+}
+
+nav {
+	overflow: hidden;
+	position: absolute;
+	float: left;
+	clear: left;
+/* 	left: 20px; */
+	top: 200px;
+	padding: 10px;
+}
+
+nav ul li{
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+}
+
+nav ul li:hover{
+	box-shadow: -14px -15px 17px -14px rgba(207, 23, 31, 0.5) inset;
+	
+}
+
+.lava{
+	position: absolute;
+	top: 25%;
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	-ms-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+nav ul li:nth-child(1):hover ~ .lava{ top: 10%; }
+nav ul li:nth-child(2):hover ~ .lava{ top: 30%; }
+nav ul li:nth-child(3):hover ~ .lava{ top: 50%; }
+nav ul li:nth-child(4):hover ~ .lava{ top: 70%; }
+nav ul li:nth-child(5):hover ~ .lava{ top: 90%; }
+
+.lavan .lava {
+	box-shadow: -14px -15px 17px -14px rgba(207, 23, 31, 0.5) inset;
+}
+
+.backed{
+	/* background: rgba(0, 0, 0, .75); */
+	float: left;
+	clear: right;
+	width: 70%;
+	display: flex;
+	margin: 1em 1em 1em 2em;
+	padding: .5em .75em;
+	background: url("../images/corner.png") no-repeat bottom right, rgba(255, 255, 255, .75);
+}
+
+.404 p{
+	margin-bottom: 0;
+	font: 3em;
+	
+}
+
+p{
+	margin-bottom: .45em;
+}
+
+section{
+	position: relative;
+	z-index: 10;
+}
+
+figure{
+	display: block;
+}
+
+#reese{
+	transform: rotate(9deg);
+	position: relative;
+	z-index: 1;
+}
+
+.imgs{
+	/* display: flex; */
+	/* width: 95%; */
+}
+
+.red{
+	color: rgb(207, 23, 31);
+}
+
+footer{
+	float: left;
+	clear: both;
+	margin: .75em;
+	padding: 1em;
+	font: 85%;
+}
