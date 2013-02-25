@@ -11,9 +11,28 @@
 					</p>
 				</section>
 				
-				<!-- <figure id="reese" class="imgs">
-					<img src="images/reese.jpg" alt="Reese" title="Reese"
+				<figure id="reese">
+					<img src="images/reese.jpg" alt="Reese" title="Reese">
 					<figcaption>Reese is mad at me for doing more homework</figcaption>
-				</figure> -->
-				</section>
+				</figure>
+				
 			</article>
+			
+			<article id="doodle">
+				<p class="up">Have you doodled lately?</p>
+				<a href="indexd" id="doodle1"></a>
+				<!-- <p class="down">doodled lately?</p> -->
+			</article>
+			
+			<section id="newsletter">
+				<?php if (empty($_POST)): ?>
+					<form method="POST" action="index.php">
+						<label>Sign up for our newsletter</label>
+						<input id="email" class="required" type="email" required="" title="We would you like your newsletter sent?" placeholder="Enter email address here" size="38" name="email">
+						<input class="submit" type="submit" value="Submit">
+					</form>
+				<?php else: ?>
+					<h1>Request Received</h1>
+				<!-- if no form data, render out the form -->
+				<?php endif; ?> 
+			</section>
