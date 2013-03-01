@@ -21,6 +21,10 @@ body{
 	position: relative;
 }
 
+.no-multiplebgs #wrapper {
+	background: url("../images/linen2.jpg") repeat left top;
+}
+
 #logo{
 	width: 17%;
 	float: left;
@@ -34,28 +38,12 @@ h1{
 	color: rgb(207, 23, 31)
 }
 
+h1 a{
+	text-decoration: none;
+}
+
 h2{
 	font: 120%;
-}
-
-nav a{
-	color:#000;
-}
-
-nav ul li{
-	background: rgba(125,220,140,0);
-	border-radius: 0  0 10px 0;
-	box-shadow: -14px -15px 17px -14px rgba(149, 152, 147, 0.5) inset;
-	margin: 5px;
-	width: 7em;
-	height: 1.1em;
-	padding: .75em;
-	position: relative;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	-o-transition: .5s;
-	-ms-transition: .5s;
-	transition: .5s;
 }
 
 nav {
@@ -68,7 +56,20 @@ nav {
 	padding: 10px;
 }
 
+nav a{
+	color:#000;
+}
+
 nav ul li{
+	background: rgba(125,220,140,0);
+	border-radius: 0  0 10px 0;
+	box-shadow: -14px -15px 17px -14px rgba(149, 152, 147, 0.5) inset;
+	display: flex;
+	margin: 5px;
+	width: 7em;
+	height: 1.1em;
+	padding: .75em;
+	position: relative;
 	-webkit-transition: .5s;
 	-moz-transition: .5s;
 	-o-transition: .5s;
@@ -76,9 +77,17 @@ nav ul li{
 	transition: .5s;
 }
 
+.no-csstransitions nav ul li {
+	background: url("../images/button-sprite.png") right top no-repeat;
+}
+
 nav ul li:hover{
 	box-shadow: -14px -15px 17px -14px rgba(207, 23, 31, 0.5) inset;
 	
+}
+
+.no-csstransitions nav ul li:hover{
+	background: url("../images/button-sprite.png") right bottom no-repeat;
 }
 
 .lava{
@@ -91,7 +100,7 @@ nav ul li:hover{
 	transition: .5s ease-in-out;
 }
 
-nav ul li:nth-child(1):hover ~ .lava{ top: 10%; }
+/* nav ul li:nth-child(1):hover ~ .lava{ top: 10%; }
 nav ul li:nth-child(2):hover ~ .lava{ top: 30%; }
 nav ul li:nth-child(3):hover ~ .lava{ top: 50%; }
 nav ul li:nth-child(4):hover ~ .lava{ top: 70%; }
@@ -99,7 +108,7 @@ nav ul li:nth-child(5):hover ~ .lava{ top: 90%; }
 
 .lavan .lava {
 	box-shadow: -14px -15px 17px -14px rgba(207, 23, 31, 0.5) inset;
-}
+} */
 
 .backed{
 	/* background: rgba(0, 0, 0, .75); */
@@ -112,12 +121,17 @@ nav ul li:nth-child(5):hover ~ .lava{ top: 90%; }
 	background: rgba(255, 255, 255, .75);
 }
 
+.lines p{
+	font-family: 'BLOKKRegular';
+	line-height: 1.1;
+}
+
 #error h1{
-	font-size: 4em;
+	font-size: 3.5em;
 }
 
 #error p{
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 #error h2{
@@ -143,6 +157,8 @@ figure{
 	-ms-transform: rotate(9deg);
 	-o-transform: rotate(9deg);
 	transform: rotate(9deg);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9876883405951377, M12=-0.15643446504023112, M21=0.15643446504023112, M22=0.9876883405951377, SizingMethod='auto expand')";
+	filter: progid:DXImageTransform.Microsoft.Matrix(             M11=0.9876883405951377, M12=-0.15643446504023112, M21=0.15643446504023112, M22=0.9876883405951377, SizingMethod='auto expand');
 	position: relative;
 	z-index: 0;
 	float: right;
@@ -180,14 +196,14 @@ figure{
 	height: 1.8em;
 }
 
-.message{
+.popup{
 	position:fixed;
 	top:40%;
 	left:50%;
 	padding: 10px;
 	margin-left: -155px;
-	background: #fff;
-	box-shadow: 0 0 10px rgb(207, 23, 31);
+	background:white;
+	box-shadow: 0 0 10px black;
 	text-align: center;
 }
 
@@ -203,6 +219,10 @@ figure{
 	text-align: center;
 	font-family: "Pacifico", script;
 	-moz-animation: doodleFont 10s ease-in infinite;
+	-webkit-animation: doodleFont 10s ease-in infinite;
+	-o-animation: doodleFont 10s ease-in infinite;
+	-ms-animation: doodleFont 10s ease-in infinite;
+	animation: doodleFont 10s ease-in infinite;
 	
 }
 
@@ -224,6 +244,80 @@ figure{
 	}
 }
 
+@-webkit-keyframes doodleFont{
+	0%{
+		color: rgb(255, 0, 0);
+	}
+	
+	33%{
+		color: rgb(0, 255, 0);
+	}
+	
+	66%{
+		color: rgb(0, 0, 255);
+	}
+	
+	100%{
+		color: rgb(255, 0, 0);
+	}
+}
+
+@-o-keyframes doodleFont{
+	0%{
+		color: rgb(255, 0, 0);
+	}
+	
+	33%{
+		color: rgb(0, 255, 0);
+	}
+	
+	66%{
+		color: rgb(0, 0, 255);
+	}
+	
+	100%{
+		color: rgb(255, 0, 0);
+	}
+}
+
+@-ms-keyframes doodleFont{
+	0%{
+		color: rgb(255, 0, 0);
+	}
+	
+	33%{
+		color: rgb(0, 255, 0);
+	}
+	
+	66%{
+		color: rgb(0, 0, 255);
+	}
+	
+	100%{
+		color: rgb(255, 0, 0);
+	}
+}
+
+@-keyframes doodleFont{
+	0%{
+		color: rgb(255, 0, 0);
+	}
+	
+	33%{
+		color: rgb(0, 255, 0);
+	}
+	
+	66%{
+		color: rgb(0, 0, 255);
+	}
+	
+	100%{
+		color: rgb(255, 0, 0);
+	}
+}
+
+.no-cssanimations #doodle p{} /*jQ spectrum*/
+
 #doodle1{
 	background: url("../images/lotus-sprite.png") no-repeat left bottom;
 	height: 40px;
@@ -240,6 +334,46 @@ figure{
 }
 
 @-moz-keyframes lotus{
+	0% {
+		background-position: 0 0;
+	}
+
+	100%{
+		background-position: 0 -680px;
+	}
+}
+
+@-webkit-keyframes lotus{
+	0% {
+		background-position: 0 0;
+	}
+
+	100%{
+		background-position: 0 -680px;
+	}
+}
+
+@-o-keyframes lotus{
+	0% {
+		background-position: 0 0;
+	}
+
+	100%{
+		background-position: 0 -680px;
+	}
+}
+
+@-ms-keyframes lotus{
+	0% {
+		background-position: 0 0;
+	}
+
+	100%{
+		background-position: 0 -680px;
+	}
+}
+
+@-keyframes lotus{
 	0% {
 		background-position: 0 0;
 	}
@@ -269,4 +403,76 @@ footer{
 	margin: 2em .75em;
 	padding: 1em;
 	font: 85%;
+}
+
+	
+	.no-flexbox 
+	.no-flexboxlegacy 
+	.no-rgba 
+	.no-backgroundsize 
+	.no-borderimage 
+	.no-borderradius 
+	.no-boxshadow 
+	.no-textshadow 
+	.no-opacity 
+	.no-csscolumns 
+	.no-cssgradients 
+	.no-cssreflections 
+	.no-csstransforms 
+
+@media (max-width: 830px){
+	nav{
+		left: 12em;
+		top: 1em;
+		max-width: 70%;
+	}
+	
+	nav ul li{
+		display: -moz-inline-stack;
+		display: -webkit-inline-stack;
+		display: -ms-inline-stack;
+		display: -o-inline-stack;
+		display: inline-stack;
+		margin: 0 .5em 1em 0;
+	}
+	
+	.backed{
+		width: 85%;
+		margin: 2%;
+	}
+}
+
+@media (max-width: 500px){
+	nav{
+		left: 10em;
+		top: 1em;
+		max-width: 70%;
+	}
+	
+	nav ul li{
+		display: block;
+		margin: 0 .5em .25em 0;
+		max-width: 7em;
+		display: flex;
+	}
+	
+	#newsletter{
+		width: 50%;
+		margin: 5em .5em 5em 1em;
+		float: left;
+	}
+	
+	#newsletter label{
+		font-size: 100%;
+		margin-right: .5em;
+	}
+	
+	#newsletter .submit{
+		font-size: 95%;
+	}
+	
+	footer{
+		margin: 5em .75em 1em .75em;
+	}
+
 }

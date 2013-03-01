@@ -1,8 +1,8 @@
 //reference to our form
-var $form = $('form');
+var $myForm = $('form');
 
 //listen for form submission
-$form.submit(stopSubmit);
+$myForm.submit(stopSubmit);
 
 //stop the submission
 function stopSubmit (e){
@@ -20,7 +20,8 @@ function removeForm(response){
 
 
 	//simple way
-	var $popup = $('<div class="message"></div>')
+	 //$myForm.parent().html($html);
+	var $popup = $('<div class="popup"></div>')
 	$popup.append($html).delay(5000).fadeOut();
 	$('body').append($popup);
 	$('#newsletter').slideUp(1000);

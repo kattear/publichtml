@@ -10,9 +10,9 @@
 	</body>
 
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="js/modernizr.custom.26659.js"></script>
 	<script src="js/jquery.arctext.js"></script>
 	<script src="js/jquery.lockfixed.min.js"></script>
+	<script src="js/jquery.color.js"></script>
 	<script src="js/main.js"></script>
 	
 </html>
